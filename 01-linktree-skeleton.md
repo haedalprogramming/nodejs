@@ -1,111 +1,231 @@
-🚀 Week 1 (수정안): 뼈대 잡기 & 개발 환경 "완벽" 구축
-"단순한 코딩이 아닙니다. 전 세계에 접속 가능한 '내 서버'를 갖는 시간입니다."
+# 🚀 Week 1 (수정안): 뼈대 잡기 & 개발 환경 "완벽" 구축
 
-변경 포인트:
+> **"단순한 코딩이 아닙니다. 전 세계에 접속 가능한 '내 서버'를 갖는
+> 시간입니다."**
 
-Git/GitHub 연동 추가: 첫날부터 버전 관리를 시작합니다. (여기서 시간 많이 소요됨)
+------------------------------------------------------------------------
 
-Rich Content: 단순 링크뿐만 아니라 <iframe> (유튜브/지도), <form> (연락처 양식), <meta> (카톡 공유 미리보기) 태그까지 다룹니다.
+## 🔥 변경 포인트
 
-Live Deploy: Vercel/GitHub Pages를 통해 실제 URL을 생성합니다.
+-   ✅ **Git/GitHub 연동 추가**\
+    → 첫날부터 버전 관리를 시작합니다. (※ 여기서 시간 많이 소요됨)
 
-📅 Monday (오후 2.5h): Pro처럼 시작하기 (Git & Semantic)
-1. The Real Environment (1시간)
-VS Code 심화 세팅:
+-   ✅ **Rich Content 구현**
 
-Prettier (포맷팅), Material Icon, Live Server 설치.
+    -   `<iframe>` (유튜브 / 지도 삽입)
+    -   `<form>` (연락처 양식)
+    -   `<meta>` (카카오톡 공유 미리보기 OG 태그)
 
-settings.json 건드려서 "저장 시 자동 정렬" 옵션 켜기. (이게 왜 편한지 보여주기)
+-   ✅ **Live Deploy**
 
-Git & GitHub CLI (가장 중요/오래 걸림):
+    -   Vercel / GitHub Pages 활용
+    -   실제 URL 생성
 
-Git 설치 및 git config (유저 이름/이메일 세팅).
+------------------------------------------------------------------------
 
-GitHub 레포지토리 생성 (linktree-project).
+# 📅 Monday (오후 2.5h)
 
-Local과 Remote 연결: git init -> git remote add origin ...
+## Pro처럼 시작하기 (Git & Semantic)
 
-첫 커밋: README.md 만들어서 git add . -> git commit -> git push.
+------------------------------------------------------------------------
 
-(학생들마다 인증 오류, 설치 오류 터지는데 이거 잡다 보면 1시간 훅 갑니다)
+## 1️⃣ The Real Environment (1시간)
 
-2. Semantic Structure: "검색엔진이 좋아하는 구조" (1시간 30분)
-Emmet 숙련: div.container>header+main+footer 처럼 단축키로 구조 짜는 법 훈련.
+### 💻 VS Code 심화 세팅
 
-구조 고도화:
+-   Prettier (자동 포맷팅)
+-   Material Icon Theme
+-   Live Server
 
-단순 div 금지. <nav>, <article>, <section>, <aside> 의 차이점 설명.
+### ⚙ settings.json 설정
 
-CSS를 위한 준비: class와 id 속성 미리 적어두기. (예: <div class="profile-card">)
+-   저장 시 자동 정렬 옵션 활성화
+-   왜 편한지 직접 체감하게 하기
 
-실습 코드:
+------------------------------------------------------------------------
 
-~~~html
+### 🧠 Git & GitHub CLI (가장 중요 / 가장 오래 걸림)
+
+1.  Git 설치
+2.  git config 설정
+
+``` bash
+git config --global user.name "이름"
+git config --global user.email "이메일"
+```
+
+3.  GitHub Repository 생성\
+    → `linktree-project`
+
+4.  Local ↔ Remote 연결
+
+``` bash
+git init
+git remote add origin https://github.com/username/linktree-project.git
+```
+
+5.  첫 커밋
+
+``` bash
+git add .
+git commit -m "first commit"
+git push -u origin main
+```
+
+> ⚠ 학생들마다 인증 오류, 설치 오류 발생 → 여기서 1시간 훅 감
+
+------------------------------------------------------------------------
+
+## 2️⃣ Semantic Structure
+
+### "검색엔진이 좋아하는 구조" (1시간 30분)
+
+### ✨ Emmet 숙련
+
+``` html
+div.container>header+main+footer
+```
+
+단축키로 구조 빠르게 생성하는 법 훈련
+
+------------------------------------------------------------------------
+
+### 🏗 구조 고도화
+
+❌ 단순 `<div>` 남발 금지
+
+  태그          용도
+  ------------- -------------
+  `<nav>`       내비게이션
+  `<article>`   독립 콘텐츠
+  `<section>`   구역 구분
+  `<aside>`     보조 콘텐츠
+
+------------------------------------------------------------------------
+
+### 🎨 CSS를 위한 사전 준비
+
+-   class / id 미리 설계
+-   예시: `<div class="profile-card">`
+
+------------------------------------------------------------------------
+
+### 🧪 실습 코드
+
+``` html
 <main class="app-container">
     <section class="profile-section">
-        </section>
+    </section>
+
     <section class="link-list">
-        </section>
+    </section>
+
     <section class="social-icons">
-        </section>
+    </section>
 </main>
-~~~
-📅 Tuesday (오전 2.5h): 콘텐츠 채우기 & 실전 배포
-1. Advanced HTML Tags (1시간)
-Media Embedding (iframe):
+```
 
-"내 페이지에 배경음악 깔기": 유튜브 '소스 코드 복사'해서 붙여넣기.
+------------------------------------------------------------------------
 
-"학교 위치 표시": 구글 맵 퍼가기 기능 활용.
+# 📅 Tuesday (오전 2.5h)
 
-Input & Form (UI만 구현):
+## 콘텐츠 채우기 & 실전 배포
 
-"나에게 메일 보내기": <form> 태그 작성.
+------------------------------------------------------------------------
 
-<input type="text">, <input type="email">, <textarea>(장문), <button type="submit">.
+## 1️⃣ Advanced HTML Tags (1시간)
 
-placeholder, required 속성 등 디테일 챙기기.
+### 🎵 Media Embedding (`iframe`)
 
-2. Meta Tags & SEO (30분)
-카톡에 링크 보낼 때 뜨는 썸네일 만들기 (OG Tag):
+-   유튜브 → "소스 코드 복사"
+-   구글 맵 → 퍼가기 기능 활용
 
-<head> 태그 안에 아래 내용 추가.
+------------------------------------------------------------------------
 
-```HTML
+### 📩 Input & Form (UI만 구현)
+
+``` html
+<form>
+  <input type="text" placeholder="이름" required>
+  <input type="email" placeholder="이메일" required>
+  <textarea placeholder="메시지를 입력하세요"></textarea>
+  <button type="submit">보내기</button>
+</form>
+```
+
+📌 학습 포인트
+
+-   `placeholder`
+-   `required`
+-   `type="email"`
+-   `button type="submit"`
+
+------------------------------------------------------------------------
+
+## 2️⃣ Meta Tags & SEO (30분)
+
+### 📲 카톡 공유 썸네일 만들기 (OG Tag)
+
+`<head>` 안에 추가:
+
+``` html
 <meta property="og:title" content="홍길동의 링크트리">
 <meta property="og:description" content="풀스택 개발자 포트폴리오입니다.">
 <meta property="og:image" content="./images/og-thumb.jpg">
 ```
-이게 있어야 "진짜 서비스" 같다는 점 강조.
 
-3. Deploy: "Hello World to the World" (1시간)
-Vercel / Netlify / GitHub Pages 중 택 1:
+> 💡 이게 있어야 "진짜 서비스"처럼 보임
 
-가장 쉬운 Vercel 추천 (GitHub 아이디로 로그인 -> 레포지토리 선택 -> Deploy 끝).
+------------------------------------------------------------------------
 
-모바일 확인:
+## 3️⃣ Deploy
 
-배포된 URL을 카카오톡 나에게 보내기로 전송.
+### "Hello World to the World" (1시간)
 
-스마트폰으로 접속해서 내 페이지가 어떻게 보이는지 확인.
+### 🚀 배포 플랫폼 (택 1)
 
-친구들에게 링크 공유하고 서로 들어 가보기.
+-   Vercel (가장 쉬움, 추천)
+-   Netlify
+-   GitHub Pages
 
-👨‍🏫 Teacher's Note (난이도 조절 & 팁)
-Git 대참사 대비:
+------------------------------------------------------------------------
 
-첫날 git push에서 권한(Token/Auth) 문제로 막히는 학생이 반 이상일 겁니다.
+### 📱 모바일 확인
 
-해결책: 소마고 학생들은 보통 GitHub 계정이 있을 테니, 미리 GitHub Desktop이나 VS Code 내장 Git 기능을 사용하는 법을 알려주어 CLI 진입장벽을 낮추는 것도 방법입니다.
+1.  배포된 URL 복사
+2.  카카오톡 "나에게 보내기" 전송
+3.  스마트폰으로 접속 확인
+4.  친구들과 서로 접속해보기
 
-시간이 남는다면? (심화):
+------------------------------------------------------------------------
 
-SVG 다루기: 아이콘을 이미지 파일(png) 말고 SVG 코드로 직접 넣어보고 fill 속성 등을 구경시켜 줍니다.
+# 👨‍🏫 Teacher's Note (난이도 조절 & 팁)
 
-favicon: 브라우저 탭에 뜨는 작은 아이콘(favicon.ico) 설정하기.
+------------------------------------------------------------------------
 
-과제:
+## ⚠ Git 대참사 대비
 
-본인 페이지 URL 제출.
+첫날 `git push`에서\
+Token/Auth 문제로 막히는 학생 다수 발생 예상
 
-README.md에 프로젝트 소개 3줄 이상 작성해서 커밋하기.
+### 💡 해결 전략
+
+-   GitHub Desktop 활용
+-   VS Code 내장 Git 사용법 병행 안내
+-   CLI 진입장벽 낮추기
+
+------------------------------------------------------------------------
+
+## ⏳ 시간이 남는다면 (심화)
+
+-   SVG 아이콘 직접 삽입
+-   `fill` 속성 확인
+-   favicon 설정 (`favicon.ico`)
+-   브라우저 탭 아이콘 바꾸기
+
+------------------------------------------------------------------------
+
+# 📝 과제
+
+1.  본인 페이지 URL 제출
+2.  `README.md`에 프로젝트 소개 3줄 이상 작성 후 커밋
