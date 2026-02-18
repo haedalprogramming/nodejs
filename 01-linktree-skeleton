@@ -40,7 +40,7 @@ CSS를 위한 준비: class와 id 속성 미리 적어두기. (예: <div class="
 
 실습 코드:
 
-```HTML
+~~~HTML
 <main class="app-container">
     <section class="profile-section">
         </section>
@@ -49,7 +49,7 @@ CSS를 위한 준비: class와 id 속성 미리 적어두기. (예: <div class="
     <section class="social-icons">
         </section>
 </main>
-```
+~~~
 📅 Tuesday (오전 2.5h): 콘텐츠 채우기 & 실전 배포
 1. Advanced HTML Tags (1시간)
 Media Embedding (iframe):
