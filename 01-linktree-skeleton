@@ -40,7 +40,7 @@ CSS를 위한 준비: class와 id 속성 미리 적어두기. (예: <div class="
 
 실습 코드:
 
-HTML
+```HTML
 <main class="app-container">
     <section class="profile-section">
         </section>
@@ -49,6 +49,7 @@ HTML
     <section class="social-icons">
         </section>
 </main>
+```
 📅 Tuesday (오전 2.5h): 콘텐츠 채우기 & 실전 배포
 1. Advanced HTML Tags (1시간)
 Media Embedding (iframe):
@@ -70,10 +71,11 @@ placeholder, required 속성 등 디테일 챙기기.
 
 <head> 태그 안에 아래 내용 추가.
 
-HTML
+```HTML
 <meta property="og:title" content="홍길동의 링크트리">
 <meta property="og:description" content="풀스택 개발자 포트폴리오입니다.">
 <meta property="og:image" content="./images/og-thumb.jpg">
+```
 이게 있어야 "진짜 서비스" 같다는 점 강조.
 
 3. Deploy: "Hello World to the World" (1시간)
