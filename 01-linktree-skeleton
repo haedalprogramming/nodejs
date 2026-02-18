@@ -40,7 +40,7 @@ CSS를 위한 준비: class와 id 속성 미리 적어두기. (예: <div class="
 
 실습 코드:
 
-~~~HTML
+~~~html
 <main class="app-container">
     <section class="profile-section">
         </section>
